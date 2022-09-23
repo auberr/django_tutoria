@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from articles import views #articles에서 views파일 가져오기
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('index/', views.index),
+    path('dinner/<str:name>/',views.dinner),
 ]
